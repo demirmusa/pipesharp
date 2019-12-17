@@ -63,7 +63,7 @@ namespace PipeSharp
         {
             var stream = GetType().Assembly.GetManifestResourceStream("PipeSharp.Template.PipeManager.txt");
             if (stream == null)
-                throw new Exception("The resource PipeFunction was not loaded properly.");
+                throw new Exception("The resource PipeManager was not loaded properly.");
 
             var reader = new StreamReader(stream);
             return reader.ReadToEnd();
