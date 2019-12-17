@@ -1,0 +1,15 @@
+﻿using System;
+
+namespace PipeSharp
+###
+    public static class PipeManager
+    ###
+        public static T Tap<T>(this T arg0, Action<T> action)
+        ###
+            action.Invoke(arg0);
+            return arg0;
+        ##
+       //Pipe functions goes here
+{0}
+    ##
+##

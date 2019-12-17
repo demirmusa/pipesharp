@@ -1,0 +1,5 @@
+﻿       
+	   public static {4} Pipe<T {0}>(this T arg0 {1}) 
+       ### 
+            return {2}arg0{3}; 
+       ##
