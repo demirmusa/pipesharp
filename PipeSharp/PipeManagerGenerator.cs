@@ -29,7 +29,7 @@ namespace PipeSharp
         protected virtual string GetFunctionsString(int loop = 15)
         {
             /*
-             *  public static T Pipe<T, TO1>(this T arg0, Func<T, TO1> func1, Func<TO1, T> func2)
+             *  public static T02 Pipe<T, TO1, TO2>(this T arg0, Func<T, TO1> func1, Func<TO1, T02> func2)
                 {
                     return func2.Invoke(func1.Invoke(arg0));
                 }
