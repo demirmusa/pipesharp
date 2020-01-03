@@ -79,18 +79,18 @@ _______
       
       public decimal DoStuff(){
        	return "Musa".Pipe(
-                  CreateAndGetPerson,
-                  CreateAndGetUser,
+                  _test.CreateAndGetPerson,
+                  _test.CreateAndGetUser,
             	  (user)=> 
-            		{//since it wants function(Func<TI,TO>) as parameter, you can also use lambda functions
-                        var account = CreateAndGetAccount(user);
+					{//since it wants function(Func<TI,TO>) as parameter, you can also use lambda functions
+                        var account = _test.CreateAndGetAccount(user);
                         account.Balance += 100;
                         return account;
                     }
-              ).Tap(ActivateAccount)
+              ).Tap(_test.ActivateAccount)
               .Pipe(
-                  GetCurrentBalance
-                  BalanceAsDecimal
+                  _test.GetCurrentBalance
+                  _test.BalanceAsDecimal
               );        
       }
   }
