@@ -24,7 +24,8 @@ It generates [RxJS Pipe](https://rxjs-dev.firebaseapp.com/api/index/function/pip
   ```
 
 
-#### Generating PipeManager.cs
+
+### Generating PipeManager.cs
 
 * Download project. 
 
@@ -34,11 +35,15 @@ It generates [RxJS Pipe](https://rxjs-dev.firebaseapp.com/api/index/function/pip
 
 * You can use generated class anywhere you want.
 
-#### Usage
+
+
+### Usage
 
 * Include **PipeManager.cs** to your project
 
 * Then you will be able to use `Pipe` and `Tap` functions
+
+
 
 ### Example
 
@@ -57,7 +62,7 @@ It generates [RxJS Pipe](https://rxjs-dev.firebaseapp.com/api/index/function/pip
   }
   ```
 
-  
+_______
 
   ```csharp
   public interface ITest{
@@ -76,7 +81,12 @@ It generates [RxJS Pipe](https://rxjs-dev.firebaseapp.com/api/index/function/pip
        	return "Musa".Pipe(
                   CreateAndGetPerson,
                   CreateAndGetUser,
-                  CreateAndGetAccount
+            	  (user)=> 
+            		{//since it wants function(Func<TI,TO>) as parameter, you can also use lambda functions
+                        var account = CreateAndGetAccount(user);
+                        account.Balance += 100;
+                        return account;
+                    }
               ).Tap(ActivateAccount)
               .Pipe(
                   GetCurrentBalance
