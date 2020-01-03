@@ -4,6 +4,26 @@ A code I wrote for entertainment purposes. Not recommended for use in real proje
 
 It generates [RxJS Pipe](https://rxjs-dev.firebaseapp.com/api/index/function/pipe) and [RxJS Tap](https://rxjs-dev.firebaseapp.com/api/operators/tap) operators for c#.
 
+ **Pipe:**  It calls functions with the result of the previous one. 
+
+  ```csharp
+  public static TO2 Pipe<T, TO1, TO2>(this T arg0, Func<T, TO1> func1, Func<TO1, TO2> func2)
+  {
+       return func2.Invoke(func1.Invoke(arg0));
+  }
+  ```
+
+  **Tap:**  Invokes functions without breaking pipe chain
+
+  ```csharp
+  public static T Tap<T>(this T arg0, Action<T> action)
+   {
+       action.Invoke(arg0);
+       return arg0;
+   }
+  ```
+
+
 #### Generating PipeManager.cs
 
 * Download project. 
@@ -20,28 +40,7 @@ It generates [RxJS Pipe](https://rxjs-dev.firebaseapp.com/api/index/function/pip
 
 * Then you will be able to use `Pipe` and `Tap` functions
 
-  **Pipe:**  It calls functions with the result of the previous one. 
-
-  ```csharp
-  public static TO2 Pipe<T, TO1, TO2>(this T arg0, Func<T, TO1> func1, Func<TO1, TO2> func2)
-  {
-       return func2.Invoke(func1.Invoke(arg0));
-  }
-  ```
-
-  **Tap:**  Invokes functions without breaking chain
-
-  ```csharp
-  public static T Tap<T>(this T arg0, Action<T> action)
-   {
-       action.Invoke(arg0);
-       return arg0;
-   }
-  ```
-
-  
-
-  *Example*
+####Example
 
   ```csharp
   private string MakeMeString(int number) => number.ToString();
