@@ -40,7 +40,7 @@ It generates [RxJS Pipe](https://rxjs-dev.firebaseapp.com/api/index/function/pip
 
 * Then you will be able to use `Pipe` and `Tap` functions
 
-####Example
+### Example
 
   ```csharp
   private string MakeMeString(int number) => number.ToString();
