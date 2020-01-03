@@ -81,8 +81,7 @@ _______
        	return "Musa".Pipe(
                   _test.CreateAndGetPerson,
                   _test.CreateAndGetUser,
-            	  (user)=> 
-		    {//since it wants function(Func<TI,TO>) as parameter, you can also use lambda functions
+            	  (user)=> {//since it wants function(Func<TI,TO>) as parameter, you can also use lambda functions
                         var account = _test.CreateAndGetAccount(user);
                         account.Balance += 100;
                         return account;
