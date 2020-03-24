@@ -25,7 +25,7 @@ It generates [RxJS Pipe](https://rxjs-dev.firebaseapp.com/api/index/function/pip
 
 ### Usage
 
-* Include **PipeManager.cs** to your project
+* Include [**PipeManager.cs**](https://github.com/demirmusa/pipesharp/blob/master/PipeSharp.UnitTests/PipeManager.cs) to your project
 
 * Then you will be able to use `Pipe` and `Tap` functions
 
