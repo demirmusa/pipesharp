@@ -23,26 +23,11 @@ It generates [RxJS Pipe](https://rxjs-dev.firebaseapp.com/api/index/function/pip
    }
   ```
 
-
-
-### Generating PipeManager.cs
-
-* Download project. 
-
-* Run **PipeSharp.GeneratorConsole**. it will generate an extension class [PipeManager.cs](https://github.com/demirmusa/pipesharp/blob/master/PipeSharp.UnitTests/PipeManager.cs) which contains `Pipe` and `Tap` functions into the bin folder.  
-
-  (You can change directory by parameter. Check [GeneratePipeManagerCs](https://github.com/demirmusa/pipesharp/blob/d50682ff5022be0aeadbc76bbcb5b3db6237176c/PipeSharp/PipeManagerGenerator.cs#L9) function)
-
-* You can use generated class anywhere you want.
-
-
-
 ### Usage
 
 * Include **PipeManager.cs** to your project
 
 * Then you will be able to use `Pipe` and `Tap` functions
-
 
 
 ### Example
@@ -96,7 +81,16 @@ _______
   
   ```
 
-  
+### Generating PipeManager.cs
+
+* Download project. 
+
+* Run **PipeSharp.GeneratorConsole**. it will generate an extension class [PipeManager.cs](https://github.com/demirmusa/pipesharp/blob/master/PipeSharp.UnitTests/PipeManager.cs) which contains `Pipe` and `Tap` functions into the bin folder.  
+
+  (You can change directory by parameter. Check [GeneratePipeManagerCs](https://github.com/demirmusa/pipesharp/blob/d50682ff5022be0aeadbc76bbcb5b3db6237176c/PipeSharp/PipeManagerGenerator.cs#L9) function)
+
+* You can use generated class anywhere you want.
+
 
 **Note:**  To generate pipe function which allow you to use more than 15 function at once, call generator with loop parameter.
 
